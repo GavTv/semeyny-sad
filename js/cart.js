@@ -1,10 +1,11 @@
 const Cart = {
   STORAGE_KEY: 'semeyny-sad-cart',
-  WHATSAPP: '79001234567',
+  WHATSAPP: '79257161229',
 
   getItems() {
     try {
-      return JSON.parse(localStorage.getItem(this.STORAGE_KEY)) || [];
+      const items = JSON.parse(localStorage.getItem(this.STORAGE_KEY)) || [];
+      return items.map(({ id, name }) => ({ id, name }));
     } catch {
       return [];
     }
@@ -17,12 +18,12 @@ const Cart = {
 
   addItem(id, name) {
     const items = this.getItems();
-    const existing = items.find(i => i.id === id);
-    if (existing) {
-      existing.qty += 1;
-    } else {
-      items.push({ id, name, qty: 1 });
+    if (items.some(i => i.id === id)) {
+      this.showToast(`«${name}» уже в корзине`);
+      this.open();
+      return;
     }
+    items.push({ id, name });
     this.saveItems(items);
     this.showToast(`«${name}» добавлен в корзину`);
     this.open();
@@ -32,30 +33,18 @@ const Cart = {
     this.saveItems(this.getItems().filter(i => i.id !== id));
   },
 
-  changeQty(id, delta) {
-    const items = this.getItems();
-    const item = items.find(i => i.id === id);
-    if (!item) return;
-    item.qty += delta;
-    if (item.qty <= 0) {
-      this.removeItem(id);
-    } else {
-      this.saveItems(items);
-    }
-  },
-
   clear() {
     localStorage.removeItem(this.STORAGE_KEY);
     this.updateUI();
   },
 
   getCount() {
-    return this.getItems().reduce((sum, i) => sum + i.qty, 0);
+    return this.getItems().length;
   },
 
   buildOrderMessage(phone, comment) {
     const items = this.getItems();
-    const list = items.map(i => `• ${i.name} × ${i.qty}`).join('\n');
+    const list = items.map(i => `• ${i.name}`).join('\n');
     let text = `Здравствуйте! Хочу оформить заказ:\n\n${list}\n\nТелефон: ${phone}`;
     if (comment) text += `\nКомментарий: ${comment}`;
     return text;
@@ -92,7 +81,7 @@ const Cart = {
             <form class="cart-form" id="cart-form">
               <div class="form-group">
                 <label for="cart-phone">Телефон *</label>
-                <input type="tel" id="cart-phone" name="phone" placeholder="+7 (900) 123-45-67" required>
+                <input type="tel" id="cart-phone" name="phone" placeholder="+7 (925) 716-12-29" required>
               </div>
               <div class="form-group">
                 <label for="cart-comment">Комментарий</label>
@@ -165,22 +154,12 @@ const Cart = {
         <div class="cart-item__info">
           <div class="cart-item__name">${item.name}</div>
         </div>
-        <div class="cart-item__qty">
-          <button class="cart-item__btn" data-action="minus" data-id="${item.id}" aria-label="Уменьшить">−</button>
-          <span class="cart-item__count">${item.qty}</span>
-          <button class="cart-item__btn" data-action="plus" data-id="${item.id}" aria-label="Увеличить">+</button>
-        </div>
         <button class="cart-item__remove" data-action="remove" data-id="${item.id}" aria-label="Удалить">&times;</button>
       </div>
     `).join('');
 
-    itemsEl.querySelectorAll('[data-action]').forEach(btn => {
-      btn.addEventListener('click', () => {
-        const { action, id } = btn.dataset;
-        if (action === 'plus') this.changeQty(id, 1);
-        if (action === 'minus') this.changeQty(id, -1);
-        if (action === 'remove') this.removeItem(id);
-      });
+    itemsEl.querySelectorAll('[data-action="remove"]').forEach(btn => {
+      btn.addEventListener('click', () => this.removeItem(btn.dataset.id));
     });
   },
 

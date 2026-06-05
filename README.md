@@ -31,12 +31,29 @@ npx serve .
 Номер WhatsApp для заказов — в файле `js/cart.js`:
 
 ```js
-WHATSAPP: '79001234567'
+WHATSAPP: '79257161229'
 ```
+
+## Домен kateflow.ru
+
+В корне лежит файл `CNAME` — он нужен для GitHub Pages.
+
+**Записи в reg.ru:**
+
+| Тип | Хост | Значение |
+|-----|------|----------|
+| A | `@` | `185.199.108.153` |
+| A | `@` | `185.199.109.153` |
+| A | `@` | `185.199.110.153` |
+| A | `@` | `185.199.111.153` |
+| CNAME | `www` | `gavtv.github.io` |
+
+В GitHub: **Settings → Pages → Custom domain** → `kateflow.ru`
 
 ## Структура
 
 ```
+├── CNAME
 ├── index.html
 ├── flowers.html
 ├── contact.html
