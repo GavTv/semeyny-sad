@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#5c7352">
+  <meta name="description" content="Сезонные цветы с фермы «Семейный сад» — георгины, пионы, космея, циннии, подсолнухи и львиный зев.">
+  <title>Что цветёт сейчас — Семейный сад</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Nunito+Sans:ital,wght@0,300;0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <header class="header">
+    <div class="container header__inner">
+      <a href="index.html" class="logo">
+        <span class="logo__name">Семейный сад</span>
+        <span class="logo__tagline">Цветочная ферма</span>
+      </a>
+      <nav class="nav" aria-label="Навигация">
+        <div class="nav__drawer">
+          <div class="nav__links">
+            <a href="index.html" class="nav__link">Главная</a>
+            <a href="flowers.html" class="nav__link nav__link--active">Сезон</a>
+            <a href="contact.html" class="nav__link">Контакты</a>
+          </div>
+          <div class="nav__extras">
+            <button type="button" class="nav__extra nav__extra--cart">
+              Корзина<span class="nav__cart-count"></span>
+            </button>
+            <a href="https://wa.me/79001234567" class="nav__extra nav__extra--wa" target="_blank" rel="noopener">WhatsApp</a>
+          </div>
+        </div>
+      </nav>
+      <div class="header__actions">
+        <button class="cart-toggle" aria-label="Корзина">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M6 6h15l-1.5 9H7.5L6 6z"/><path d="M6 6L5 3H2"/><circle cx="9" cy="20" r="1"/><circle cx="18" cy="20" r="1"/>
+          </svg>
+          <span class="cart-toggle__count">0</span>
+        </button>
+        <button class="burger" aria-label="Меню">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <section class="page-hero">
+    <div class="container">
+      <span class="section-label">Сезон 2025</span>
+      <h1 class="page-hero__title">Что цветёт сейчас</h1>
+      <p class="page-hero__subtitle">Мы выращиваем только то, что цветёт в данный момент — честно, сезонно и с любовью</p>
+    </div>
+  </section>
+
+  <section class="section section--cream">
+    <div class="container">
+      <div class="grid-3">
+        <article class="card flower-card fade-in">
+          <div class="card__image">
+            <img src="https://images.unsplash.com/photo-1599428998204-87663d5a73f3?w=600&q=80" alt="Пионы">
+          </div>
+          <div class="card__body">
+            <h3 class="card__title">Пионы</h3>
+            <p class="card__text">Пышные, ароматные, нежные — королевы июньского сада. Мы выращиваем 8 сортов: от классических розовых до коралловых и белоснежных.</p>
+            <span class="card__season">Июнь — Июль</span>
+            <button class="btn btn--outline-green add-to-cart" data-id="piony" data-name="Пионы">В корзину</button>
+          </div>
+        </article>
+
+        <article class="card flower-card fade-in">
+          <div class="card__image">
+            <img src="https://images.unsplash.com/photo-1606041008023-472dfb5e530f?w=600&q=80" alt="Георгины">
+          </div>
+          <div class="card__body">
+            <h3 class="card__title">Георгины</h3>
+            <p class="card__text">Королева осеннего сада. Помпонные, кактусовые, анемоновидные — каждая форма уникальна. Идеальны для пышных букетов.</p>
+            <span class="card__season">Август — Октябрь</span>
+            <button class="btn btn--outline-green add-to-cart" data-id="georginy" data-name="Георгины">В корзину</button>
+          </div>
+        </article>
+
+        <article class="card flower-card fade-in">
+          <div class="card__image">
+            <img src="https://images.unsplash.com/photo-1591886960571-74d81a9f357e?w=600&q=80" alt="Космея">
+          </div>
+          <div class="card__body">
+            <h3 class="card__title">Космея</h3>
+            <p class="card__text">Воздушная и нежная, с тонкими лепестками. Белая, розовая и вишнёвая — незаменима в романтических композициях.</p>
+            <span class="card__season">Июль — Сентябрь</span>
+            <button class="btn btn--outline-green add-to-cart" data-id="kosmeya" data-name="Космея">В корзину</button>
+          </div>
+        </article>
+
+        <article class="card flower-card fade-in">
+          <div class="card__image">
+            <img src="https://images.unsplash.com/photo-1597848212624-e593b4b5b29e?w=600&q=80" alt="Циннии">
+          </div>
+          <div class="card__body">
+            <h3 class="card__title">Циннии</h3>
+            <p class="card__text">Яркие, жизнерадостные, с идеальными круглыми бутонами. Оранжевые, малиновые, жёлтые — солнце в каждом стебле.</p>
+            <span class="card__season">Июль — Октябрь</span>
+            <button class="btn btn--outline-green add-to-cart" data-id="tsinnii" data-name="Циннии">В корзину</button>
+          </div>
+        </article>
+
+        <article class="card flower-card fade-in">
+          <div class="card__image">
+            <img src="https://images.unsplash.com/photo-1597848212624-e593b4b5b29e?w=600&q=80&sat=-50" alt="Подсолнухи">
+          </div>
+          <div class="card__body">
+            <h3 class="card__title">Подсолнухи</h3>
+            <p class="card__text">Высокие, гордые, золотые. Мы выращиваем сорта для срезки — с крепкими стеблями и долгим сроком стояния в вазе.</p>
+            <span class="card__season">Июль — Сентябрь</span>
+            <button class="btn btn--outline-green add-to-cart" data-id="podsolnukhi" data-name="Подсолнухи">В корзину</button>
+          </div>
+        </article>
+
+        <article class="card flower-card fade-in">
+          <div class="card__image">
+            <img src="https://images.unsplash.com/photo-1465146633011-14f8e0781093?w=600&q=80" alt="Львиный зев">
+          </div>
+          <div class="card__body">
+            <h3 class="card__title">Львиный зев</h3>
+            <p class="card__text">Вертикальный акцент в любом букете. Нежно-розовые, белые и пурпурные шпорцы — элегантность и изящество.</p>
+            <span class="card__season">Июнь — Август</span>
+            <button class="btn btn--outline-green add-to-cart" data-id="lvinyy-zev" data-name="Львиный зев">В корзину</button>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--white">
+    <div class="container container--narrow" style="text-align: center;">
+      <div class="fade-in">
+        <span class="section-label">Наш подход</span>
+        <h2 class="section-title">Только сезонное — только честное</h2>
+        <p style="color: var(--text-light); font-size: 1.1rem; line-height: 1.9; margin-bottom: 2rem;">
+          Мы не покупаем цветы у оптовиков и не импортируем из-за границы. Всё, что вы видите на нашем прилавке, выросло на наших полях в текущем сезоне. Когда пионы уходят — мы честно говорим об этом и предлагаем то, что цветёт сейчас. Это наш принцип, и именно поэтому наши покупатели возвращаются снова и снова.
+        </p>
+        <button class="btn btn--primary" onclick="Cart.open()">Оформить заказ</button>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <div class="logo__name">Семейный сад</div>
+          <p>Семейная цветочная ферма с 1987 года. Мы выращиваем сезонные цветы с любовью и заботой, чтобы каждый букет приносил радость и напоминал о красоте природы.</p>
+        </div>
+        <div>
+          <h4 class="footer__heading">Разделы</h4>
+          <ul class="footer__links">
+            <li><a href="index.html">Главная</a></li>
+            <li><a href="flowers.html">Сезонные цветы</a></li>
+            <li><a href="contact.html">Контакты</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer__heading">Контакты</h4>
+          <ul class="footer__links">
+            <li><a href="tel:+79001234567">+7 (900) 123-45-67</a></li>
+            <li><a href="mailto:hello@semeyny-sad.ru">hello@semeyny-sad.ru</a></li>
+            <li>Московская обл., д. Цветочное</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <span>&copy; 2025 Семейный сад. Все права защищены.</span>
+        <span>Выращено с любовью на нашей ферме</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/cart.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
