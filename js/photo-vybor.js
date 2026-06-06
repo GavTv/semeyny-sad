@@ -1,62 +1,62 @@
 const PHOTO_PICKERS = {
   1: {
-    image: 'images/photo-grid.png',
+    image: 'images/photo-grid.jpg',
     alt: 'Подборка 1 — девять растений',
     items: [
-      { id: 1, title: 'Львиный зев', image: 'images/photo-vybor/grid-01-lvinyy-zev.jpg', text: 'Антирринум с нежно-розовыми лепестками и характерным бордовым пятном. Вертикальный акцент в клумбе, цветёт с июня по август.' },
-      { id: 2, title: 'Рудбекия', image: 'images/photo-vybor/grid-02-rudbekiya.jpg', text: 'Солнечные жёлтые соцветия с тёмным сердцевиной. Неприхотливое многолетнее растение для солнечных участков.' },
-      { id: 3, title: 'Лобелия', image: 'images/photo-vybor/grid-03-lobeliya.jpg', text: 'Мелкие фиолетовые цветки плотным ковром. Подходит для кашпо, бордюров и переднего плана композиции.' },
-      { id: 4, title: 'Космея', image: 'images/photo-vybor/grid-04-kosmeya.jpg', text: 'Воздушные розовые лепестки на тонких стеблях. Незаменима в натуралистических и романтических посадках.' },
-      { id: 5, title: 'Василёк', image: 'images/photo-vybor/grid-05-vasilek.jpg', text: 'Классический синий василёк с характерной рваной каймой лепестков. Лаконичный и узнаваемый элемент луговой клумбы.' },
-      { id: 6, title: 'Немезия', image: 'images/photo-vybor/grid-06-nemeziya.jpg', text: 'Яркие красно-белые цветки с контрастным центром. Даёт живое пятно цвета в смешанных посадках.' },
-      { id: 7, title: 'Бархатцы', image: 'images/photo-vybor/grid-07-barhatsy.jpg', text: 'Насыщенные оранжево-жёлтые соцветия. Долгое цветение, устойчивость и выразительная форма бутона.' },
-      { id: 8, title: 'Мак', image: 'images/photo-vybor/grid-08-mak.jpg', text: 'Алые лепестки с тонкой текстурой и тёмным сердцем. Создаёт ощущение луга и естественного цветения.' },
-      { id: 9, title: 'Львиный зев', image: 'images/photo-vybor/grid-09-lvinyy-zev-belyy.jpg', text: 'Бело-фиолетовые шпорцы на вертикальном стебле. Элегантный сорт для акцентных и фоновых посадок.' }
+      { id: 1, title: 'Азалия листопадная оранжевая', image: 'images/photo-vybor/grid1-01-full.jpg', text: 'Декоративная азалия с насыщенной оранжевой окраской. Коллекционный сорт для полутени и кислых почв.' },
+      { id: 2, title: 'Азалия японская белая', image: 'images/photo-vybor/grid1-02-full.jpg', text: 'Нежная японская азалия с белыми соцветиями. Элегантный акцент весеннего сада.' },
+      { id: 3, title: 'Азалия японская розовая', image: 'images/photo-vybor/grid1-03-full.jpg', text: 'Розовая японская азалия с плотным цветением. Хорошо смотрится в групповых посадках.' },
+      { id: 4, title: 'Котовник (кошачья мята)', image: 'images/photo-vybor/grid1-04-full.jpg', text: 'Ароматный котовник с серо-зелёной листвой. Неприхотливый многолетник для солнечных мест.' },
+      { id: 5, title: 'Котовник голубой', image: 'images/photo-vybor/grid1-05-full.jpg', text: 'Котовник с голубыми соцветиями и продолжительным цветением. Привлекает пчёл и бабочек.' },
+      { id: 6, title: 'Купена садовая', image: 'images/photo-vybor/grid1-06-full.jpg', text: 'Тенелюбивый многолетник с белыми колокольчиками. Подходит для затенённого бордюра и под кронами деревьев.' },
+      { id: 7, title: 'Рододендрон лососевый', image: 'images/photo-vybor/grid1-07-full.jpg', text: 'Рододендрон с нежной лососевой окраской. Коллекционный экземпляр для влажной тени.' },
+      { id: 8, title: 'Рододендрон фиолетовый', image: 'images/photo-vybor/grid1-08-full.jpg', text: 'Насыщенный фиолетовый рододендрон. Выразительный куст для кислой почвы и полутени.' },
+      { id: 9, title: 'Сосна горная карликовая', image: 'images/photo-vybor/grid1-09-full.jpg', text: 'Карликовая сосна с плотной хвоей. Структурный элемент рокария и контейнерных композиций.' }
     ]
   },
   2: {
     image: 'images/photo-grid-2.jpg',
     alt: 'Подборка 2 — девять растений',
     items: [
-      { id: 1, title: 'Пионы', image: 'images/photo-vybor/grid2-01-piony.jpg', text: 'Коллекционные пионы с пышным бутоном и нежной окраской. Цветение в июне — июле.' },
-      { id: 2, title: 'Георгины', image: 'images/photo-vybor/grid2-02-georginy.jpg', text: 'Декоративные георгины коллекционных линий. Август — октябрь.' },
-      { id: 3, title: 'Космея', image: 'images/photo-vybor/grid2-03-kosmeya.jpg', text: 'Воздушная космея с тонкими лепестками. Июль — сентябрь.' },
-      { id: 4, title: 'Циннии', image: 'images/photo-vybor/grid2-04-tsinnii.jpg', text: 'Яркие циннии с идеальной формой бутона. Июль — октябрь.' },
-      { id: 5, title: 'Подсолнухи', image: 'images/photo-vybor/grid2-05-podsolnukhi.jpg', text: 'Декоративные подсолнухи для садовой композиции. Июль — сентябрь.' },
-      { id: 6, title: 'Львиный зев', image: 'images/photo-vybor/grid2-06-lvinyy-zev.jpg', text: 'Вертикальный акцент в клумбе. Июнь — август.' },
-      { id: 7, title: 'Сезонное поле', image: 'images/photo-vybor/grid2-07-hero.jpg', text: 'Фрагмент цветущего поля из коллекции. Актуально в сезон цветения.' },
-      { id: 8, title: 'Пионы', image: 'images/photo-vybor/grid2-08-piony.jpg', text: 'Коллекционные пионы с пышным бутоном и нежной окраской. Цветение в июне — июле.' },
-      { id: 9, title: 'Георгины', image: 'images/photo-vybor/grid2-09-georginy.jpg', text: 'Декоративные георгины коллекционных линий. Август — октябрь.' }
+      { id: 1, title: 'Пионы', image: 'images/photo-vybor/grid2-01-piony-full.jpg', text: 'Коллекционные пионы с пышным бутоном и нежной окраской. Цветение в июне — июле.' },
+      { id: 2, title: 'Георгины', image: 'images/photo-vybor/grid2-02-georginy-full.jpg', text: 'Декоративные георгины коллекционных линий. Август — октябрь.' },
+      { id: 3, title: 'Космея', image: 'images/photo-vybor/grid2-03-kosmeya-full.jpg', text: 'Воздушная космея с тонкими лепестками. Июль — сентябрь.' },
+      { id: 4, title: 'Циннии', image: 'images/photo-vybor/grid2-04-tsinnii-full.jpg', text: 'Яркие циннии с идеальной формой бутона. Июль — октябрь.' },
+      { id: 5, title: 'Подсолнухи', image: 'images/photo-vybor/grid2-05-podsolnukhi-full.jpg', text: 'Декоративные подсолнухи для садовой композиции. Июль — сентябрь.' },
+      { id: 6, title: 'Львиный зев', image: 'images/photo-vybor/grid2-06-lvinyy-zev-full.jpg', text: 'Вертикальный акцент в клумбе. Июнь — август.' },
+      { id: 7, title: 'Сезонное поле', image: 'images/photo-vybor/grid2-07-hero-full.jpg', text: 'Фрагмент цветущего поля из коллекции. Актуально в сезон цветения.' },
+      { id: 8, title: 'Пионы', image: 'images/photo-vybor/grid2-08-piony-full.jpg', text: 'Коллекционные пионы с пышным бутоном и нежной окраской. Цветение в июне — июле.' },
+      { id: 9, title: 'Георгины', image: 'images/photo-vybor/grid2-09-georginy-full.jpg', text: 'Декоративные георгины коллекционных линий. Август — октябрь.' }
     ]
   },
   3: {
     image: 'images/photo-grid-3.jpg',
     alt: 'Подборка 3 — девять растений',
     items: [
-      { id: 1, title: 'Георгины', image: 'images/photo-vybor/grid3-01-georginy.jpg', text: 'Декоративные георгины коллекционных линий. Август — октябрь.' },
-      { id: 2, title: 'Пионы', image: 'images/photo-vybor/grid3-02-piony.jpg', text: 'Коллекционные пионы с пышным бутоном и нежной окраской. Цветение в июне — июле.' },
-      { id: 3, title: 'Сезонное поле', image: 'images/photo-vybor/grid3-03-hero.jpg', text: 'Фрагмент цветущего поля из коллекции. Актуально в сезон цветения.' },
-      { id: 4, title: 'Космея', image: 'images/photo-vybor/grid3-04-kosmeya.jpg', text: 'Воздушная космея с тонкими лепестками. Июль — сентябрь.' },
-      { id: 5, title: 'Циннии', image: 'images/photo-vybor/grid3-05-tsinnii.jpg', text: 'Яркие циннии с идеальной формой бутона. Июль — октябрь.' },
-      { id: 6, title: 'Подсолнухи', image: 'images/photo-vybor/grid3-06-podsolnukhi.jpg', text: 'Декоративные подсолнухи для садовой композиции. Июль — сентябрь.' },
-      { id: 7, title: 'Львиный зев', image: 'images/photo-vybor/grid3-07-lvinyy-zev.jpg', text: 'Вертикальный акцент в клумбе. Июнь — август.' },
-      { id: 8, title: 'Космея', image: 'images/photo-vybor/grid3-08-kosmeya.jpg', text: 'Воздушная космея с тонкими лепестками. Июль — сентябрь.' },
-      { id: 9, title: 'Циннии', image: 'images/photo-vybor/grid3-09-tsinnii.jpg', text: 'Яркие циннии с идеальной формой бутона. Июль — октябрь.' }
+      { id: 1, title: 'Георгины', image: 'images/photo-vybor/grid3-01-georginy-full.jpg', text: 'Декоративные георгины коллекционных линий. Август — октябрь.' },
+      { id: 2, title: 'Пионы', image: 'images/photo-vybor/grid3-02-piony-full.jpg', text: 'Коллекционные пионы с пышным бутоном и нежной окраской. Цветение в июне — июле.' },
+      { id: 3, title: 'Сезонное поле', image: 'images/photo-vybor/grid3-03-hero-full.jpg', text: 'Фрагмент цветущего поля из коллекции. Актуально в сезон цветения.' },
+      { id: 4, title: 'Космея', image: 'images/photo-vybor/grid3-04-kosmeya-full.jpg', text: 'Воздушная космея с тонкими лепестками. Июль — сентябрь.' },
+      { id: 5, title: 'Циннии', image: 'images/photo-vybor/grid3-05-tsinnii-full.jpg', text: 'Яркие циннии с идеальной формой бутона. Июль — октябрь.' },
+      { id: 6, title: 'Подсолнухи', image: 'images/photo-vybor/grid3-06-podsolnukhi-full.jpg', text: 'Декоративные подсолнухи для садовой композиции. Июль — сентябрь.' },
+      { id: 7, title: 'Львиный зев', image: 'images/photo-vybor/grid3-07-lvinyy-zev-full.jpg', text: 'Вертикальный акцент в клумбе. Июнь — август.' },
+      { id: 8, title: 'Космея', image: 'images/photo-vybor/grid3-08-kosmeya-full.jpg', text: 'Воздушная космея с тонкими лепестками. Июль — сентябрь.' },
+      { id: 9, title: 'Циннии', image: 'images/photo-vybor/grid3-09-tsinnii-full.jpg', text: 'Яркие циннии с идеальной формой бутона. Июль — октябрь.' }
     ]
   },
   4: {
     image: 'images/photo-grid-4.jpg',
     alt: 'Подборка 4 — девять растений',
     items: [
-      { id: 1, title: 'Подсолнухи', image: 'images/photo-vybor/grid4-01-podsolnukhi.jpg', text: 'Декоративные подсолнухи для садовой композиции. Июль — сентябрь.' },
-      { id: 2, title: 'Львиный зев', image: 'images/photo-vybor/grid4-02-lvinyy-zev.jpg', text: 'Вертикальный акцент в клумбе. Июнь — август.' },
-      { id: 3, title: 'Пионы', image: 'images/photo-vybor/grid4-03-piony.jpg', text: 'Коллекционные пионы с пышным бутоном и нежной окраской. Цветение в июне — июле.' },
-      { id: 4, title: 'Сезонное поле', image: 'images/photo-vybor/grid4-04-hero.jpg', text: 'Фрагмент цветущего поля из коллекции. Актуально в сезон цветения.' },
-      { id: 5, title: 'Георгины', image: 'images/photo-vybor/grid4-05-georginy.jpg', text: 'Декоративные георгины коллекционных линий. Август — октябрь.' },
-      { id: 6, title: 'Космея', image: 'images/photo-vybor/grid4-06-kosmeya.jpg', text: 'Воздушная космея с тонкими лепестками. Июль — сентябрь.' },
-      { id: 7, title: 'Циннии', image: 'images/photo-vybor/grid4-07-tsinnii.jpg', text: 'Яркие циннии с идеальной формой бутона. Июль — октябрь.' },
-      { id: 8, title: 'Пионы', image: 'images/photo-vybor/grid4-08-piony.jpg', text: 'Коллекционные пионы с пышным бутоном и нежной окраской. Цветение в июне — июле.' },
-      { id: 9, title: 'Георгины', image: 'images/photo-vybor/grid4-09-georginy.jpg', text: 'Декоративные георгины коллекционных линий. Август — октябрь.' }
+      { id: 1, title: 'Подсолнухи', image: 'images/photo-vybor/grid4-01-podsolnukhi-full.jpg', text: 'Декоративные подсолнухи для садовой композиции. Июль — сентябрь.' },
+      { id: 2, title: 'Львиный зев', image: 'images/photo-vybor/grid4-02-lvinyy-zev-full.jpg', text: 'Вертикальный акцент в клумбе. Июнь — август.' },
+      { id: 3, title: 'Пионы', image: 'images/photo-vybor/grid4-03-piony-full.jpg', text: 'Коллекционные пионы с пышным бутоном и нежной окраской. Цветение в июне — июле.' },
+      { id: 4, title: 'Сезонное поле', image: 'images/photo-vybor/grid4-04-hero-full.jpg', text: 'Фрагмент цветущего поля из коллекции. Актуально в сезон цветения.' },
+      { id: 5, title: 'Георгины', image: 'images/photo-vybor/grid4-05-georginy-full.jpg', text: 'Декоративные георгины коллекционных линий. Август — октябрь.' },
+      { id: 6, title: 'Космея', image: 'images/photo-vybor/grid4-06-kosmeya-full.jpg', text: 'Воздушная космея с тонкими лепестками. Июль — сентябрь.' },
+      { id: 7, title: 'Циннии', image: 'images/photo-vybor/grid4-07-tsinnii-full.jpg', text: 'Яркие циннии с идеальной формой бутона. Июль — октябрь.' },
+      { id: 8, title: 'Пионы', image: 'images/photo-vybor/grid4-08-piony-full.jpg', text: 'Коллекционные пионы с пышным бутоном и нежной окраской. Цветение в июне — июле.' },
+      { id: 9, title: 'Георгины', image: 'images/photo-vybor/grid4-09-georginy-full.jpg', text: 'Декоративные георгины коллекционных линий. Август — октябрь.' }
     ]
   }
 };
