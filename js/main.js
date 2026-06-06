@@ -22,15 +22,8 @@ document.addEventListener('DOMContentLoaded', () => {
       document.body.classList.toggle('nav-open', isOpen);
     });
 
-    nav.querySelectorAll('.nav__link').forEach(link => {
+    nav.querySelectorAll('.nav__link, .nav__extra').forEach(link => {
       link.addEventListener('click', closeNav);
-    });
-
-    nav.querySelectorAll('.nav__extra--cart').forEach(btn => {
-      btn.addEventListener('click', () => {
-        closeNav();
-        if (typeof Cart !== 'undefined') Cart.open();
-      });
     });
 
     document.addEventListener('keydown', e => {

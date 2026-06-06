@@ -1,5 +1,5 @@
 /* ============================================
-   Семейный сад — Premium Flower Farm Design
+   Kateflow — Plant Collector Portfolio
    ============================================ */
 
 :root {
@@ -130,8 +130,6 @@ h4 { font-size: 1.35rem; }
 
 .btn--primary:hover {
   background: var(--green);
-  transform: translateY(-2px);
-  box-shadow: var(--shadow);
 }
 
 .btn--secondary {
@@ -152,7 +150,6 @@ h4 { font-size: 1.35rem; }
 
 .btn--whatsapp:hover {
   background: #1da851;
-  transform: translateY(-2px);
 }
 
 .btn--telegram {
@@ -162,7 +159,6 @@ h4 { font-size: 1.35rem; }
 
 .btn--telegram:hover {
   background: #006daa;
-  transform: translateY(-2px);
 }
 
 .btn--vk {
@@ -186,7 +182,20 @@ h4 { font-size: 1.35rem; }
   color: var(--white);
 }
 
-.add-to-cart {
+.btn--hero {
+  background: transparent;
+  color: var(--white);
+  border: 1.5px solid rgba(255, 255, 255, 0.65);
+  padding: 0.85rem 1.5rem;
+  font-size: 0.8rem;
+}
+
+.btn--hero:hover {
+  background: rgba(255, 255, 255, 0.12);
+  border-color: var(--white);
+}
+
+.btn--inquire {
   padding: 0.55rem 1.1rem;
   font-size: 0.72rem;
   letter-spacing: 0.04em;
@@ -252,17 +261,18 @@ h4 { font-size: 1.35rem; }
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 2.5rem;
+  gap: 1.5rem;
   flex: 1;
 }
 
 .nav__link {
-  font-size: 0.8rem;
+  font-size: 0.72rem;
   font-weight: 500;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--text-light);
   position: relative;
+  white-space: nowrap;
 }
 
 .nav__link::after {
@@ -383,10 +393,53 @@ h4 { font-size: 1.35rem; }
   inset: 0;
   background: linear-gradient(
     to top,
-    rgba(61, 58, 54, 0.65) 0%,
-    rgba(61, 58, 54, 0.2) 50%,
-    rgba(61, 58, 54, 0.1) 100%
+    rgba(61, 58, 54, 0.55) 0%,
+    rgba(61, 58, 54, 0.18) 55%,
+    rgba(61, 58, 54, 0.08) 100%
   );
+}
+
+.club-badge {
+  display: inline-block;
+  font-family: var(--font-body);
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--cream);
+  border: 1px solid rgba(255, 255, 255, 0.45);
+  padding: 0.45rem 0.9rem;
+  margin-bottom: 1.25rem;
+}
+
+.intro-block {
+  text-align: center;
+}
+
+.intro-block__lead {
+  font-family: var(--font-display);
+  font-size: clamp(1.35rem, 2.5vw, 1.75rem);
+  line-height: 1.55;
+  color: var(--text);
+  margin-bottom: 1.5rem;
+}
+
+.intro-block p {
+  font-size: 1.05rem;
+  color: var(--text-light);
+  line-height: 1.9;
+}
+
+.section-text {
+  color: var(--text-light);
+  font-size: 1.1rem;
+  line-height: 1.9;
+  margin-bottom: 2rem;
+}
+
+.section-cta {
+  text-align: center;
+  margin-top: 2rem;
 }
 
 .hero__content {
@@ -435,7 +488,7 @@ h4 { font-size: 1.35rem; }
 .page-hero {
   margin-top: var(--header-height);
   padding: 6rem 0 4rem;
-  background: var(--green-light);
+  background: var(--cream-dark);
   text-align: center;
 }
 
@@ -672,7 +725,6 @@ h4 { font-size: 1.35rem; }
 }
 
 .event-card:hover {
-  transform: translateX(4px);
   box-shadow: var(--shadow-lg);
 }
 
@@ -811,25 +863,41 @@ h4 { font-size: 1.35rem; }
 .contact-info {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 0;
 }
 
 .contact-item {
-  display: flex;
-  gap: 1rem;
-  align-items: flex-start;
+  padding: 1.25rem 0;
+  border-bottom: 1px solid var(--border);
 }
 
-.contact-item__icon {
-  width: 48px;
-  height: 48px;
-  background: var(--green-light);
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-  font-size: 1.25rem;
+.contact-item:last-child {
+  border-bottom: none;
+}
+
+.contact-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: start;
+}
+
+.contact-layout__form {
+  background: var(--white);
+  padding: 2.5rem;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow);
+}
+
+.contact-form .form-group textarea {
+  min-height: 140px;
+}
+
+.form-note {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  margin-bottom: 1.5rem;
+  line-height: 1.7;
 }
 
 .contact-item__label {
@@ -972,11 +1040,6 @@ h4 { font-size: 1.35rem; }
   padding: 2rem 1.5rem;
 }
 
-.value-item__icon {
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
-}
-
 .value-item h4 {
   margin-bottom: 0.75rem;
 }
@@ -995,7 +1058,7 @@ h4 { font-size: 1.35rem; }
 
 .footer__grid {
   display: grid;
-  grid-template-columns: 2fr 1fr 1fr 1fr;
+  grid-template-columns: 2fr 1fr 1fr;
   gap: 3rem;
   margin-bottom: 4rem;
 }
@@ -1086,11 +1149,6 @@ h4 { font-size: 1.35rem; }
   box-shadow: var(--shadow);
 }
 
-.location-type__icon {
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
-}
-
 .location-type h4 {
   margin-bottom: 0.5rem;
 }
@@ -1128,12 +1186,28 @@ h4 { font-size: 1.35rem; }
     grid-template-columns: repeat(2, 1fr);
   }
 
+  .contact-layout {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
   .footer__grid {
     grid-template-columns: 1fr 1fr;
   }
 
   .gallery--masonry {
     grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 900px) {
+  .nav__link {
+    font-size: 0.65rem;
+    letter-spacing: 0.04em;
+  }
+
+  .nav {
+    gap: 1rem;
   }
 }
 
@@ -1264,7 +1338,12 @@ h4 { font-size: 1.35rem; }
   }
 
   .nav__extra--wa {
-    background: #25d366;
+    background: #3d9a5c;
+    color: #fff;
+  }
+
+  .nav__extra--tg {
+    background: var(--green-dark);
     color: #fff;
   }
 
