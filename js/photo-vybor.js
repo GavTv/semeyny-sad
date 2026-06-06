@@ -71,11 +71,6 @@ const PhotoPicker = {
     document.getElementById('picker-modal-title').textContent = item.title;
     document.getElementById('picker-modal-text').textContent = item.text;
 
-    const waText = encodeURIComponent(
-      `Здравствуйте! Интересует растение: ${item.title}. Хотел(а) бы уточнить наличие.`
-    );
-    document.getElementById('picker-modal-wa').href = `https://wa.me/79257161229?text=${waText}`;
-
     overlay.classList.add('picker-modal--open');
     document.body.style.overflow = 'hidden';
   },
@@ -139,6 +134,7 @@ const PhotoPicker = {
     });
 
     document.getElementById('picker-modal-close')?.addEventListener('click', () => this.close());
+
     document.getElementById('picker-modal')?.addEventListener('click', e => {
       if (e.target.id === 'picker-modal') this.close();
     });
