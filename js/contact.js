@@ -46,7 +46,42 @@ const Contact = {
     window.open(`https://wa.me/${this.WHATSAPP}?text=${text}`, '_blank');
   },
 
+  copyText(el) {
+    const text = el.dataset.copy;
+    if (!text) return;
+
+    const hint = el.querySelector('.contact-copy__hint');
+    const done = () => {
+      el.classList.add('contact-copy--done');
+      if (hint) hint.textContent = 'Скопировано';
+      setTimeout(() => {
+        el.classList.remove('contact-copy--done');
+        if (hint) hint.textContent = 'Скопировать';
+      }, 2000);
+    };
+
+    if (navigator.clipboard?.writeText) {
+      navigator.clipboard.writeText(text).then(done).catch(() => {});
+      return;
+    }
+
+    const area = document.createElement('textarea');
+    area.value = text;
+    area.setAttribute('readonly', '');
+    area.style.position = 'fixed';
+    area.style.left = '-9999px';
+    document.body.appendChild(area);
+    area.select();
+    document.execCommand('copy');
+    document.body.removeChild(area);
+    done();
+  },
+
   init() {
+    document.querySelectorAll('[data-copy]').forEach(el => {
+      el.addEventListener('click', () => this.copyText(el));
+    });
+
     document.querySelectorAll('[data-contact-form]').forEach(form => {
       form.addEventListener('submit', e => e.preventDefault());
 

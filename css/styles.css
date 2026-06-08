@@ -1140,15 +1140,90 @@ h4 { font-size: 1.35rem; }
 }
 
 .contact-form__actions {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 0.75rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.25rem;
 }
 
-.contact-form__actions .btn {
-  width: 100%;
-  padding: 0.9rem 1rem;
-  font-size: 0.8rem;
+.btn--messenger {
+  width: auto;
+  padding: 0.5rem 1.15rem;
+  font-size: 0.72rem;
+  border-radius: 999px;
+  letter-spacing: 0.05em;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.btn--messenger.btn--whatsapp {
+  background: linear-gradient(135deg, #2ee06a, #1da851);
+}
+
+.btn--messenger.btn--whatsapp:hover {
+  background: linear-gradient(135deg, #25d366, #179446);
+  box-shadow: 0 4px 14px rgba(37, 211, 102, 0.35);
+  transform: translateY(-1px);
+}
+
+.btn--messenger.btn--telegram {
+  background: linear-gradient(135deg, #3db8f0, #0077b5);
+}
+
+.btn--messenger.btn--telegram:hover {
+  background: linear-gradient(135deg, #29b6f6, #006daa);
+  box-shadow: 0 4px 14px rgba(0, 136, 204, 0.35);
+  transform: translateY(-1px);
+}
+
+.btn--compact {
+  padding: 0.65rem 1.35rem;
+  font-size: 0.78rem;
+  border-radius: 999px;
+}
+
+.contact-copy {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.85rem;
+  padding: 0.55rem 0.9rem;
+  background: var(--cream);
+  border: 1px solid rgba(61, 58, 54, 0.14);
+  border-radius: var(--radius);
+  cursor: pointer;
+  font-family: var(--font-body);
+  font-size: 1.05rem;
+  color: var(--text);
+  transition: border-color var(--transition), background var(--transition), box-shadow var(--transition);
+}
+
+.contact-copy:hover,
+.contact-copy:focus-visible {
+  background: var(--white);
+  border-color: var(--green-dark);
+  box-shadow: 0 2px 10px rgba(92, 115, 82, 0.12);
+  outline: none;
+}
+
+.contact-copy--done {
+  border-color: var(--green-dark);
+  background: rgba(92, 115, 82, 0.08);
+}
+
+.contact-copy__email {
+  user-select: all;
+}
+
+.contact-copy__hint {
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  white-space: nowrap;
+}
+
+.contact-copy--done .contact-copy__hint {
+  color: var(--green-dark);
 }
 
 .form-note {
@@ -1447,10 +1522,6 @@ h4 { font-size: 1.35rem; }
   .contact-layout {
     grid-template-columns: 1fr;
     gap: 2.5rem;
-  }
-
-  .contact-form__actions {
-    grid-template-columns: 1fr;
   }
 
   .footer__grid {
